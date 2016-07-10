@@ -4,10 +4,9 @@
   <head>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
-       function myFunction(){
-      document.getElementById("frm1").submit();
-      emailjs.send("gmail","template_1gMu0FI0",{name: "inname", notes: "innote"});
-   };
+   (function(){
+      emailjs.send("gmail","template_1gMu0FI0",{name: "James", notes: "Check this out!"});
+   })();
 </script>
   </head>
 <body>
