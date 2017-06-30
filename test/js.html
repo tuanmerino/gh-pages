@@ -5,7 +5,10 @@
 <script>
   name=prompt("Who am I ?");
   var myName = "Nguyen Tuan Anh";
-  confirm("Thank "+name+"welcome to page "+myName);
+  confirm("Thank "+name+" welcome to page "+myName);
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', "//haiz-tuanmerino.c9users.io/index.html", true);
+  xhr.send();
   
 </script>
 </html>
