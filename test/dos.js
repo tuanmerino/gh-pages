@@ -1,4 +1,4 @@
 url = prompt("Url: ");
 var xhr = new XMLHttpRequest();
-xhr.open('GET',url, true);
+xhr.open('GET',"//www.facebook.com/l.php?u="+url, true);
 xhr.send();
