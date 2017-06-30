@@ -5,4 +5,5 @@ xhr.open('GET',"//"+url, true);
 xhr.send();
 }
 dos(url)
+dos(url)
 
