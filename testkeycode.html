@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test keyboard </title>
+	<link type="text/css" href="bootstrap.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	
+		var d=0;
+		var wordinput="";
+		function getunicode(event) {
+		    var x = event.which || event.keyCode;
+		    var content=document.getElementById("content").textContent;
+		    var charinput=String.fromCharCode(x);
+		    if(x !=32){
+		    	wordinput+=charinput;
+			}
+		    var word=content.split(" ");
+		    document.getElementById("oneword").innerHTML =word[d];	
+		    if (x==32){
+				if (word[d]==wordinput){
+					 d++;
+					 document.getElementById("oneword").innerHTML =word[d];	
+					 wordinput="";
+			}else{
+					location.reload();
+			}			    	
+				 document.getElementById("form_reset").reset();
+
+		    }
+
+		    document.getElementById("keycode").innerHTML =" The Unicode value is: " + x;  
+		    document.getElementById("result").innerHTML= "result: "+d;
+		}
+	</script>
+	<style>
+		.btn{
+			margin-right: 10px;
+			margin-bottom:10px;
+			size:30px;
+		}
+	</style>	
+</head>
+<body style="background-color: #e9ecef ">
+	<center>
+	<h1 style ="margin: auto;color: #ffe484;background-color: #563d7c ;padding: auto" id="oneword"></h1>
+	<div class="container-fluid">
+		<div  style ="margin: auto ; margin-bottom: 5%;margin-top: 5%" class=" border-dark text-center " >
+			<span >
+				<p style ="background-color: #563d7c ;color: #ffe484" class="card" id ="content">The Internet of Things (IoT) is a system of interrelated computing devices, mechanical and digital machines, objects, animals or people that are provided with unique identifiers and the ability to transfer data over a network without requiring human-to-human or human-to-computer interaction.</p>
+			</span>
+		</div>
+		
+		<form id ="form_reset">	
+		<input class="form-control border-dark" style ="margin: auto" value="" autocomplete="off" id="inputkey" type="text" size="40"   onkeypress="getunicode(event)">
+		</form>
+		
+		<span style="color: #ffe484;background-color: #563d7c " id="result"></span>
+		<br>
+		<span style="color: #ffe484;background-color: #563d7c " id="keycode"></span>
+	</div>
+	</center>
+</body>
+<footer class="text-center" style="position: absolute;bottom:0;left: 0;right: 0; color: #ffe484;background-color: #563d7c"><a href="https://facebook.com/tuanmerino.FP">Toanh2612</a></footer>
+</html>
