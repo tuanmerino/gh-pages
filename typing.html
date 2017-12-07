@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test keyboard </title>
+	<title>Typing </title>
 	<link type="text/css" href="bootstrap.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -47,12 +47,12 @@
 	<div class="container-fluid">
 		<div  style ="margin: auto ; margin-bottom: 5%;margin-top: 5%" class="border border-dark text-center " >
 			<span >
-				<p id ="content">The Internet of Things (IoT) is a system of interrelated computing devices, mechanical and digital machines, objects, animals or people that are provided with unique identifiers and the ability to transfer data over a network without requiring human-to-human or human-to-computer interaction.</p>
+				<p class="card" id ="content">The Internet of Things (IoT) is a system of interrelated computing devices, mechanical and digital machines, objects, animals or people that are provided with unique identifiers and the ability to transfer data over a network without requiring human-to-human or human-to-computer interaction.</p>
 			</span>
 		</div>
 		
 		<form id ="form_reset">	
-		<input class="text-center" style ="margin: auto" value="" autocomplete="off" id="inputkey" type="text" size="40"   onkeypress="getunicode(event)">
+		<input class="form-control" style ="margin: auto" value="" autocomplete="off" id="inputkey" type="text" size="40"   onkeypress="getunicode(event)">
 		</form>
 		
 		<span id="result"></span>
